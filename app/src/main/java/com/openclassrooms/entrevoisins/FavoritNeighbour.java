@@ -25,7 +25,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
         }
 
-public void back(View v) {    //pour retourner à l’activite principale on appel la methode finish()
+public void favorit(View v) {    //pour retourner à l’activite principale on appel la methode finish()
         // qui vas tuer cette activite
 
         finish();

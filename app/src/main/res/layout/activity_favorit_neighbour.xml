@@ -34,6 +34,5 @@
         android:background="@drawable/ic_star_border_white_24dp"
         tools:layout_editor_absoluteX="300dp"
         android:padding="25dp"
-        android:shadowColor="#E6FA6D"
         tools:layout_editor_absoluteY="78dp" />
 </android.support.constraint.ConstraintLayout>
