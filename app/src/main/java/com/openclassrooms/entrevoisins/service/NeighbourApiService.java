@@ -15,6 +15,11 @@ public interface NeighbourApiService {
      * @return {@link List}
      */
     List<Neighbour> getNeighbours();
+       void GenerateNeigkboug;
+
+
+
+
 
     /**
      * Deletes a neighbour

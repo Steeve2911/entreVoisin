@@ -56,14 +56,14 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/backButton"
+        android:id="@+id/activity_ajoute_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        app:elevation="6dp"
-        android:src="@drawable/ic_person_add_white_24dp"/>
-
+        android:src="@drawable/ic_person_add_white_24dp"
+        android:contentDescription="@string/bottom_sheet_behavior"
+        android:onClick="ajout_utilisateur"
+        android:layout_margin="16dp" />
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -17,7 +17,7 @@ public class DummyNeighbourApiService implements  NeighbourApiService {
      */
     @Override
     public List<Neighbour> getNeighbours() {
-        return neighbours;
+        return neighbours.add();
     }
 
     /**
