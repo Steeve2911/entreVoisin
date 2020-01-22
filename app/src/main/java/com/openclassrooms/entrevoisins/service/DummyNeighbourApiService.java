@@ -17,8 +17,15 @@ public class DummyNeighbourApiService implements  NeighbourApiService {
      */
     @Override
     public List<Neighbour> getNeighbours() {
-        return neighbours.add();
+        return neighbours;
     }
+
+    @Override
+    public void addNeighbour() {
+         Neighbour toto = new Neighbour(99, "toto", "http://i.pravatar.cc/150?u=a042581f4e29026704d" );
+             neighbours.add(toto);
+    }
+
 
     /**
      * {@inheritDoc}
