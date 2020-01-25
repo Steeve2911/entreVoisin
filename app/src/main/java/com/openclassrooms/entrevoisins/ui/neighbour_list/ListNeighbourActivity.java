@@ -1,5 +1,6 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import com.openclassrooms.entrevoisins.R;
 import com.openclassrooms.entrevoisins.di.DI;
@@ -46,6 +48,7 @@ public class ListNeighbourActivity extends AppCompatActivity {
         mViewPager.setAdapter(mPagerAdapter);
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+
     }
 
     @OnClick(R.id.activity_ajoute_btn)
@@ -55,6 +58,9 @@ public class ListNeighbourActivity extends AppCompatActivity {
         mApiService.addNeighbour();
         Snackbar.make(v, "Utilisateur ajouté", Snackbar.LENGTH_SHORT)
                 .setAction("", this:: onClick).show();
+
+        Intent favorit = new Intent(ListNeighbourActivity.this, ProfilNeighbour.class);
+        startActivity(favorit);
 
     }
 

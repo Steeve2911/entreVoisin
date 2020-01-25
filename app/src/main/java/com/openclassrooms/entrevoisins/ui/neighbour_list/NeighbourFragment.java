@@ -1,6 +1,7 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
@@ -31,6 +32,7 @@ public class NeighbourFragment extends Fragment {
 
     /**
      * Create and return a new instance
+     *
      * @return @{@link NeighbourFragment}
      */
     public static NeighbourFragment newInstance() {
@@ -78,6 +80,7 @@ public class NeighbourFragment extends Fragment {
 
     /**
      * Fired if the user clicks on a delete button
+     *
      * @param event
      */
     @Subscribe
@@ -85,14 +88,9 @@ public class NeighbourFragment extends Fragment {
         mApiService.deleteNeighbour(event.neighbour);
         initList();
     }
-   /* @Subscribe
-    public void ajoutFavorit(View v) {
-        //on creer une nouvelle intent on définit la class de depart ici this et la class d'arrivé ici SecondActivite
-        Intent AjoutFavorit = new Intent(this, FavoritNeighbour.class);
-        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici FavoritNeighbour
-        startActivity(AjoutFavorit);
 
-    }*/
+
 }
+
 
 

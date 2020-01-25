@@ -62,7 +62,7 @@
         android:layout_gravity="end|bottom"
         android:src="@drawable/ic_person_add_white_24dp"
         android:contentDescription="@string/bottom_sheet_behavior"
-        android:onClick="ajout_utilisateur"
+        android:onClick="ajoutRamdomUser"
         android:layout_margin="16dp" />
 
 
