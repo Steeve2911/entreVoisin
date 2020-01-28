@@ -9,10 +9,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.Button;
 
 import com.openclassrooms.entrevoisins.R;
-import com.openclassrooms.entrevoisins.di.DI;
 import com.openclassrooms.entrevoisins.service.NeighbourApiService;
 
 import butterknife.BindView;
@@ -28,10 +27,11 @@ public class ListNeighbourActivity extends AppCompatActivity {
     Toolbar mToolbar;
     @BindView(R.id.container)
     ViewPager mViewPager;
-    @BindView(R.id.activity_ajoute_btn)
+    @BindView(R.id.activity_ajout_btn)
     FloatingActionButton mAjouteBtn;
 
     private NeighbourApiService mApiService;
+
 
 
     ListNeighbourPagerAdapter mPagerAdapter;
@@ -42,16 +42,13 @@ public class ListNeighbourActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_neighbour);
         ButterKnife.bind(this);
 
-        mApiService = DI.getNeighbourApiService();
         setSupportActionBar(mToolbar);
         mPagerAdapter = new ListNeighbourPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
-
     }
-
-    @OnClick(R.id.activity_ajoute_btn)
+    @OnClick(R.id.activity_ajout_btn)
 
     public void onClick(View v){
 
@@ -63,7 +60,6 @@ public class ListNeighbourActivity extends AppCompatActivity {
         startActivity(favorit);
 
     }
-
 }
 
 

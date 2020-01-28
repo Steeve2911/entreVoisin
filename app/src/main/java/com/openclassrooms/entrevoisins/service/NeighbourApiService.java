@@ -10,21 +10,19 @@ import java.util.List;
  */
 public interface NeighbourApiService {
 
-    /**
-     * Get all my Neighbours
-     * @return {@link List}
-     */
-    List<Neighbour> getNeighbours();
+  /**
+   * Get all my Neighbours
+   * @return {@link List}
+   */
+  List<Neighbour> getNeighbours();
 
 
 
-    void addNeighbour();
+  void addNeighbour();
 
-
-
-    /**
-     * Deletes a neighbour
-     * @param neighbour
-     */
-    void deleteNeighbour(Neighbour neighbour);
+  /**
+   * Deletes a neighbour
+   * @param neighbour
+   */
+  void deleteNeighbour(Neighbour neighbour);
 }

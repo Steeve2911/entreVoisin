@@ -7,18 +7,18 @@ import com.openclassrooms.entrevoisins.model.Neighbour;
  */
 public class DeleteNeighbourEvent {
 
-    /**
-     * Neighbour to delete
-     */
-    public Neighbour neighbour;
+  /**
+   * Neighbour to delete
+   */
+  public Neighbour neighbour;
 
-    /**
-     * Constructor.
-     * @param neighbour
-     */
-    public DeleteNeighbourEvent(Neighbour neighbour) {
-        this.neighbour = neighbour;
-    }
+  /**
+   * Constructor.
+   * @param neighbour
+   */
+  public DeleteNeighbourEvent(Neighbour neighbour) {
+    this.neighbour = neighbour;
+  }
 
 
 }

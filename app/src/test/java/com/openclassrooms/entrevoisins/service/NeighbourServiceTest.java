@@ -20,24 +20,24 @@ import static org.junit.Assert.assertThat;
 @RunWith(JUnit4.class)
 public class NeighbourServiceTest {
 
-    private NeighbourApiService service;
+  private NeighbourApiService service;
 
-    @Before
-    public void setup() {
-        service = DI.getNewInstanceApiService();
-    }
+  @Before
+  public void setup() {
+    service = DI.getNewInstanceApiService();
+  }
 
-    @Test
-    public void getNeighboursWithSuccess() {
-        List<Neighbour> neighbours = service.getNeighbours();
-        List<Neighbour> expectedNeighbours = DummyNeighbourGenerator.DUMMY_NEIGHBOURS;
-        assertThat(neighbours, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedNeighbours.toArray()));
-    }
+  @Test
+  public void getNeighboursWithSuccess() {
+    List<Neighbour> neighbours = service.getNeighbours();
+    List<Neighbour> expectedNeighbours = DummyNeighbourGenerator.DUMMY_NEIGHBOURS;
+    assertThat(neighbours, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedNeighbours.toArray()));
+  }
 
-    @Test
-    public void deleteNeighbourWithSuccess() {
-        Neighbour neighbourToDelete = service.getNeighbours().get(0);
-        service.deleteNeighbour(neighbourToDelete);
-        assertFalse(service.getNeighbours().contains(neighbourToDelete));
-    }
+  @Test
+  public void deleteNeighbourWithSuccess() {
+    Neighbour neighbourToDelete = service.getNeighbours().get(0);
+    service.deleteNeighbour(neighbourToDelete);
+    assertFalse(service.getNeighbours().contains(neighbourToDelete));
+  }
 }

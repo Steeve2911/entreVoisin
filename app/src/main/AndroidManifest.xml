@@ -12,7 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.neighbour_list.ProfilNeighbour"></activity>
+        <activity
+            android:name=".ui.neighbour_list.ProfilNeighbour"
+            android:label="Profil"
+            android:parentActivityName=".ui.neighbour_list.ListNeighbourActivity" >
+
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.neighbour_list.ListNeighbourActivity" />
+        </activity>
+
         <activity
             android:name=".ui.neighbour_list.ListNeighbourActivity"
             android:label="@string/app_name"
@@ -23,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

@@ -16,12 +16,12 @@ public class ProfilNeighbour extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorit_neighbour2);
-    this.ConfigureToolBar();
+        this.ConfigureToolBar();
 
     }
     private void ConfigureToolBar() {
 
-            //Get the toolbar (Serialise)
+        //Get the toolbar (Serialise)
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //Set the toolbar
         setSupportActionBar(toolbar);
@@ -31,7 +31,7 @@ public class ProfilNeighbour extends AppCompatActivity {
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
 
-        }
+    }
 
     private void setSupportActionBar(Toolbar toolbar) {
 
